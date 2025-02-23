@@ -52,5 +52,6 @@ export const login =  (req, res) => {
 }
 
 export const logout =  (req, res) => {
-    res.send("Logout!");
+    res.clearCookie("jwt-talentnest");
+    res.status(200).json({message: "Logged out successfully"});
 }
