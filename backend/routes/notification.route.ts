@@ -1,10 +1,10 @@
 import express from "express";
-import { protectRoute } from "../middleware/auth.middleware.js";
+import { protectRoute } from "../middleware/auth.middleware.ts";
 import {
     deleteNotification,
     getUserNotifications,
     markNotificationAsRead,
-} from "../controllers/notification.controller.js";
+} from "../controllers/notification.controller.ts";
 
 const router = express.Router();
 

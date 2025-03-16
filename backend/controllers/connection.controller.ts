@@ -1,6 +1,6 @@
-import Connection from "../models/connection.model.js";
-import Notification from "../models/notification.model.js";
-import User from "../models/user.model.js";
+import Connection from "../models/connection.model.ts";
+import Notification from "../models/notification.model.ts";
+import User from "../models/user.model.ts";
 
 export const sendConnectionRequest = async (req, res) => {
     try {

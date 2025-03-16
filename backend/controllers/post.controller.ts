@@ -1,5 +1,5 @@
-import Post from "../models/post.model.js";
-import cloudinary from "../lib/cloudinary.js";
+import Post from "../models/post.model.ts";
+import cloudinary from "../lib/cloudinary.ts";
 
 export const getFeedPosts = async (req, res) => {
     try {

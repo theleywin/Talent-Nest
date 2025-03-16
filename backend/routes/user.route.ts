@@ -1,6 +1,6 @@
 import express from "express";
-import { protectRoute } from "../middleware/auth.middleware.js";
-import { getSuggestedConnections, getPublicProfile, updateProfile } from "../controllers/user.controller.js";
+import { protectRoute } from "../middleware/auth.middleware.ts";
+import { getSuggestedConnections, getPublicProfile, updateProfile } from "../controllers/user.controller.ts";
 
 const router = express.Router();
 

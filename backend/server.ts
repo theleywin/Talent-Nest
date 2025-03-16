@@ -1,12 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import authRoutes from './routes/auth.route.js';
-import userRoutes from './routes/user.route.js';
-import postRoutes from './routes/post.route.js';
-import notificationRoutes from "./routes/notification.route.js";
-import connectionRoutes from "./routes/connection.route.js";
-import { connectDB } from './lib/db.js';
+import authRoutes from './routes/auth.route.ts';
+import userRoutes from './routes/user.route.ts';
+import postRoutes from './routes/post.route.ts';
+import notificationRoutes from "./routes/notification.route.ts";
+import connectionRoutes from "./routes/connection.route.ts";
+import { connectDB } from './lib/db.ts';
 
 
 dotenv.config();
