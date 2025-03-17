@@ -5,6 +5,8 @@ import LoginPage from "./pages/auth/LoginPage.tsx";
 import NoMatchPage from "./pages/NoMatchPage.tsx";
 import {Route, Routes} from "react-router-dom";
 import React from "react";
+import {Toaster} from "react-hot-toast";
+
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NoMatchPage />} />
         </Routes>
+          <Toaster/>
       </Layout>
   )};
 
