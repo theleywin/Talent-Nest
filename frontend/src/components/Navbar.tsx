@@ -82,7 +82,7 @@ const Navbar = () => {
                             </>
                         ) : (
                             <>
-                                <Link to='/login' className='btn btn-ghost'>
+                                <Link to='/login' className='btn btn-ghost text-black hover:text-white'>
                                     Sign In
                                 </Link>
                                 <Link to='/signup' className='btn btn-neutral'>
