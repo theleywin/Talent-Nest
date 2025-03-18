@@ -21,6 +21,7 @@ const PostCreation = ({ user }) => {
         onSuccess: () => {
             resetForm();
             toast.success("Post created successfully");
+            queryClient.invalidateQueries({ queryKey: ["posts"] });
         },
         onError: (err) => {
             toast.error(err.response.data.message || "Failed to create post");
@@ -69,7 +70,7 @@ const PostCreation = ({ user }) => {
                 <img src={user.profilePicture || "/avatar.png"} alt={user.name} className='size-12 rounded-full' />
                 <textarea
                     placeholder="What's on your mind?"
-                    className='w-full p-3 rounded-lg bg-gray-100 hover:bg-gray-50 focus:bg-gray-100 focus:outline-none resize-none transition-colors duration-200 min-h-[100px]'
+                    className='w-full text-black p-3 rounded-lg bg-gray-100 hover:bg-gray-50 focus:bg-gray-100 focus:outline-none resize-none transition-colors duration-200 min-h-[100px]'
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                 />
