@@ -8,6 +8,7 @@ import React from "react";
 import {toast, Toaster} from "react-hot-toast";
 import {axiosInstance} from "./lib/axios.ts";
 import {useQuery} from "@tanstack/react-query";
+import NotificationPage from "./pages/NotificationPage.tsx";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path='/' element={authUser ? <HomePage /> : <Navigate to={"/login"} />} />
             <Route path='/signup' element={!authUser ? <SignupPage /> : <Navigate to={"/"} />} />
             <Route path="/login"element={!authUser ? <LoginPage /> : <Navigate to={"/"} />} />
+            <Route path="/notifications"element={authUser ? <NotificationPage /> : <Navigate to={"/login"} />} />
             <Route path="*" element={<NoMatchPage />} />
         </Routes>
           <Toaster/>
