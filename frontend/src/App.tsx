@@ -11,6 +11,7 @@ import {useQuery} from "@tanstack/react-query";
 import NotificationPage from "./pages/NotificationPage.tsx";
 import NetworkPage from "./pages/NetworkPage.tsx";
 import PostPage from "./pages/PostPage.tsx";
+import ProfilePage from "./pages/ProfilePage.tsx";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path="/notifications"element={authUser ? <NotificationPage /> : <Navigate to={"/login"} />} />
             <Route path="/network"element={authUser ? <NetworkPage /> : <Navigate to={"/login"} />} />
             <Route path='/post/:postId' element={authUser ? <PostPage /> : <Navigate to={"/login"} />} />
+            <Route path='/profile/:username' element={authUser ? <ProfilePage /> : <Navigate to={"/login"} />} />
             <Route path="*" element={<NoMatchPage />} />
         </Routes>
           <Toaster/>
